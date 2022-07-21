@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "whatsappNumber": {
+      "type": "string",
+      "required": true
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "CASH_ON_DELIVERY",
+        "TRANSFER"
+      ],
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "NEW",
+        "ON_PROGRESS",
+        "SHIPPING",
+        "COMPLETED"
+      ],
+      "required": false,
+      "default": "NEW"
+    }
+  }
+}
