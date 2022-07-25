@@ -33,7 +33,8 @@
       "type": "enumeration",
       "enum": [
         "CASH_ON_DELIVERY",
-        "TRANSFER"
+        "TRANSFER",
+        "DANA"
       ],
       "required": true
     },

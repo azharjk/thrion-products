@@ -19,7 +19,8 @@
     "@strapi/plugin-i18n": "4.2.3",
     "@strapi/plugin-users-permissions": "4.2.3",
     "@strapi/strapi": "4.2.3",
-    "better-sqlite3": "7.4.6"
+    "better-sqlite3": "7.4.6",
+    "xendit-node": "^1.21.5"
   },
   "author": {
     "name": "Muhammad Azhari"

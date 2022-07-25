@@ -11138,6 +11138,13 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 
+xendit-node@^1.21.5:
+  version "1.21.5"
+  resolved "https://registry.yarnpkg.com/xendit-node/-/xendit-node-1.21.5.tgz#fa30d346c87959fcf1fe3ecefa3c6b3c65d65d63"
+  integrity sha512-YRFRHPhbKnOlFIsRhSBzzOebPMHx5ejNziA6VvDhd40i2uaFxT4VGm0V4mk8m1LVt82Xjg4JiZQFjTDF+tDgvg==
+  dependencies:
+    node-fetch "^2.6.1"
+
 xss@^1.0.6, xss@^1.0.8:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/xss/-/xss-1.0.13.tgz#6e48f616128b39f366dfadc57411e1eb5b341c6c"
