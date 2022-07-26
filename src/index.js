@@ -12,7 +12,7 @@ module.exports = {
   register({ strapi }) {
     const graphqlExtension = strapi.plugin("graphql").service("extension");
 
-    const extension = ({ _nexus }) => ({
+    const extension = ({ __nexus }) => ({
       typeDefs: `
         type Actions {
           desktop_web_checkout_url: String
