@@ -76,7 +76,7 @@ module.exports = {
             async resolve(_, { data }) {
               // FIXME: Convert to strapi service
               const xendit = new Xendit({
-                secretKey: process.env["XENDIT_TOKEN"]
+                secretKey: process.env["XENDIT_TOKEN"],
               });
 
               const eWallet = new xendit.EWallet();
@@ -89,8 +89,8 @@ module.exports = {
                   checkoutMethod: data.checkoutMethod,
                   channelCode: data.channelCode,
                   channelProperties: {
-                    successRedirectURL: data.channelProperties.successRedirectURL
-                  }
+                    successRedirectURL: data.channelProperties.successRedirectURL,
+                  },
                 });
 
                 // Save Xendit response to order-detail
@@ -99,8 +99,8 @@ module.exports = {
                     xenditId: response.id,
                     order: data.orderID,
                     xenditStatus: response.status,
-                    xenditChargeAmount: response.charge_amount
-                  }
+                    xenditChargeAmount: response.charge_amount,
+                  },
                 });
 
                 return response;
@@ -113,15 +113,15 @@ module.exports = {
               // FIXME: Should not reached here
               console.assert(false);
               return null;
-            }
-          }
-        }
+            },
+          },
+        },
       },
       resolversConfig: {
         "Mutation.createEWalletCharge": {
-          auth: false // FIXME: For development purpose
-        }
-      }
+          auth: false, // FIXME: For development purpose
+        },
+      },
     });
 
     graphqlExtension.use(extension);

@@ -24,6 +24,13 @@
     "no-console": 0,
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}]
+    "no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }]
   }
 }
