@@ -56,13 +56,25 @@ module.exports = {
           successRedirectURL: String
         }
 
+        enum CheckoutMethod {
+          ONE_TIME_PAYMENT
+        }
+
+        enum ChannelCode {
+          ID_DANA
+        }
+
+        enum Currency {
+          IDR
+        }
+
         input CreateEWalletChargeInput {
           orderID: ID
           referenceID: String
-          currency: String
+          currency: Currency
           amount: Float
-          checkoutMethod: String
-          channelCode: String
+          checkoutMethod: CheckoutMethod
+          channelCode: ChannelCode
           channelProperties: ChannelPropertiesInput
         }
 
