@@ -1,0 +1,6 @@
+repos:
+- repo: https://github.com/pre-commit/mirrors-eslint
+  rev: v8.20.0
+  hooks:
+  - id: eslint
+    always_run: true
