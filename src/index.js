@@ -57,6 +57,7 @@ module.exports = {
         }
 
         input CreateEWalletChargeInput {
+          orderID: ID
           referenceID: String
           currency: String
           amount: Float
@@ -89,6 +90,16 @@ module.exports = {
                   channelCode: data.channelCode,
                   channelProperties: {
                     successRedirectURL: data.channelProperties.successRedirectURL
+                  }
+                });
+
+                // Save Xendit response to order-detail
+                await strapi.entityService.create("api::order-detail.order-detail", {
+                  data: {
+                    xenditId: response.id,
+                    order: data.orderID,
+                    xenditStatus: response.status,
+                    xenditChargeAmount: response.charge_amount
                   }
                 });
 

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_details",
+  "info": {
+    "singularName": "order-detail",
+    "pluralName": "order-details",
+    "displayName": "Order Detail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "xenditId": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "xenditStatus": {
+      "type": "enumeration",
+      "enum": [
+        "SUCCEEDED",
+        "PENDING",
+        "FAILED",
+        "VOIDED",
+        "REFUNDED"
+      ],
+      "required": true
+    },
+    "xenditChargeAmount": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}
