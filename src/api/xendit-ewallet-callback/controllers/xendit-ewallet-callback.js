@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  callbackAction: async (ctx, _next) => {
+  callbackAction: async (ctx, __next) => {
     const callbackToken = ctx.headers["x-callback-token"];
     if (callbackToken !== process.env["XENDIT_CALLBACK_TOKEN"]) {
       ctx.send({
